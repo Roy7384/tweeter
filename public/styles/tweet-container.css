@@ -1,0 +1,52 @@
+.tweet-container {
+  color: inherit;
+}
+
+.tweets {
+  margin: 1em 0;
+  padding: 0.3em;
+  border-bottom: 3px solid;
+}
+
+article {
+  margin: 2em 0;
+  border: 3px solid;
+  padding: 1em;
+}
+
+article:hover {
+  box-shadow: 5px 5px #4056a1;
+}
+
+.tweet-container header, footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-container header p {
+  color: rgb(195, 199, 221);
+  display: flex;
+  align-items: center;
+}
+
+.tweet-container img {
+  width: 3em;
+}
+
+.tweet-container div {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.tweet-container footer {
+  font-size: 18px;
+}
+
+.tweet-container footer i {
+  color: #4056a1
+}
+
+.tweet-container footer i:hover {
+  color: orange
+}
