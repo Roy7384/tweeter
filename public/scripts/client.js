@@ -4,6 +4,13 @@
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 $(() => {
+
+  // helper function to escape html syntax from user input
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.append(document.createTextNode(str));
+    return div.innerHTML;
+  }
   
   // function to create a single tweet element
   const createTweetElement = function(tweetData) {
@@ -16,7 +23,7 @@ $(() => {
     </div>
     <p>${tweetData.user.handle}</p>
     </header>
-    <p class="tweet">${tweetData.content.text}</p>
+    <p class="tweet">${escape(tweetData.content.text)}</p>
     <footer>
     <div>
     <p>${timeago.format(tweetData.created_at)}</p>
@@ -69,8 +76,7 @@ $(() => {
     }
     // serialize submit data and update tweets displayed
     const serializedData = $(event.target).serialize();
-    $.post('/tweets', serializedData, (a1, a2, response) => {
-      console.log('form submit successful: ' + response.status);
+    $.post('/tweets', serializedData, () => {
 
       loadedTweets();
     });
