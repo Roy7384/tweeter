@@ -10,7 +10,7 @@ $(() => {
     let div = document.createElement('div');
     div.append(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
   
   // function to create a single tweet element
   const createTweetElement = function(tweetData) {
@@ -60,6 +60,20 @@ $(() => {
   // load tweets from server the first time user open up the page
   loadedTweets();
 
+  // helper function to create element containning validation error and append to the top of main section
+  const addValidationError = function(str) {
+    // remove previous added error message
+    $('.new-tweet').find('b').remove();
+
+    // generate new error message
+    const errorMsg = $('<b>').text(str);
+    $('.new-tweet').prepend(errorMsg);
+
+    // animate the error message
+    errorMsg.hide();
+    errorMsg.slideDown();
+  };
+
   // function to submit new tweets
   $("form").submit(event => {
     // prevent default action from form element
@@ -70,10 +84,18 @@ $(() => {
     const inputText = $textAreaEle.val();
 
     // exit the submit process if nothing is in input or text exceeds 140 characters
-    if (!inputText.length || inputText.length > 140) {
-      alert('Input area is empty or has more than 140 characters!')
+    if (!inputText.length) {
+      addValidationError('⛔️  You didnt type anything ⛔️');
       return;
     }
+    if (inputText.length > 140) {
+      addValidationError('⛔️  Your tweet exceeds 140 characters ⛔️');
+      return;
+    }
+    
+    // remove any exist error message
+    $('.new-tweet').find('b').remove();
+
     // serialize submit data and update tweets displayed
     const serializedData = $(event.target).serialize();
     $.post('/tweets', serializedData, () => {
