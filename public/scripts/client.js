@@ -35,6 +35,7 @@ $(() => {
   // function that take in an array of tweet data, create and append the tweet element to html
   const renderTweets = function(tweets) {
     const $tweetContainer = $('#tweets-container');
+    $tweetContainer.empty();
     let $tweetElement;
     for (const tweet of tweets) {
       $tweetElement = createTweetElement(tweet);
@@ -66,16 +67,15 @@ $(() => {
       alert('Input area is empty or has more than 140 characters!')
       return;
     }
-    // serialize submit data
+    // serialize submit data and update tweets displayed
     const serializedData = $(event.target).serialize();
     $.post('/tweets', serializedData, (a1, a2, response) => {
-      console.log(response.status);
-    });
+      console.log('form submit successful: ' + response.status);
 
+      loadedTweets();
+    });
+    
     // clear input area after submitting
     $textAreaEle.val('');
-
-    // update the tweets displaying on the page
-    loadedTweets();
   });
 });
