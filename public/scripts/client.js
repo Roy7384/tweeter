@@ -14,7 +14,7 @@ $(() => {
     const $userName = $('<span>').text(tweetData.user.name);
     const $userHandle = $('<p>').text(tweetData.user.handle);
     const $tweetText = $("<p class='tweet'>").text(tweetData.content.text);
-    const $createDate = $('<p>').text(tweetData.created_at);
+    const $createDate = $('<p>').text(timeago.format(tweetData.created_at));
     const $socialIcons = $('<div>').html("<i class='fa-solid fa-flag'></i><i class='fa-solid fa-retweet'></i><i class='fa-solid fa-heart'></i>");
   
     const $headerDiv = $('<div>').append($profilePic, $userName);
