@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.new-tweet label {
+  font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+}
+
+form button {
+  background-color: #4056a1;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  background-color: inherit;
+  border-width: 0 0 3px 0;
+  word-wrap: none;
+} 
+
+textarea:focus {
+  outline: none;
+}
+
+form .counter.exceed{
+  color: red;
+}
