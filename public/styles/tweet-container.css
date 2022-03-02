@@ -1,52 +1,49 @@
-.tweet-container {
-  color: inherit;
-}
-
-.tweets {
-  margin: 1em 0;
-  padding: 0.3em;
-  border-bottom: 3px solid;
-}
-
 article {
+  color: inherit;
   margin: 2em 0;
   border: 3px solid;
   padding: 1em;
+}
+
+.tweet {
+  margin: 1em 0;
+  padding: 0.3em;
+  border-bottom: 3px solid;
 }
 
 article:hover {
   box-shadow: 5px 5px #4056a1;
 }
 
-.tweet-container header, footer {
+article header, footer {
   display: flex;
   justify-content: space-between;
 }
 
-.tweet-container header p {
+article header p {
   color: rgb(195, 199, 221);
   display: flex;
   align-items: center;
 }
 
-.tweet-container img {
+article img {
   width: 3em;
 }
 
-.tweet-container div {
+article div {
   display: flex;
   align-items: center;
   gap: 0.8em;
 }
 
-.tweet-container footer {
+article footer {
   font-size: 18px;
 }
 
-.tweet-container footer i {
+article footer i {
   color: #4056a1
 }
 
-.tweet-container footer i:hover {
+article footer i:hover {
   color: orange
 }
