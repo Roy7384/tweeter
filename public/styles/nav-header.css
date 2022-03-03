@@ -18,9 +18,6 @@ nav button {
   border: none;
 }
 
-nav button:hover {
-  transform: scale(1.5);
-}
 
 nav span {
   font-size: 2.1em;

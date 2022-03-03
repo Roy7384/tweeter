@@ -40,7 +40,3 @@ p {
   bottom: 1em;
   right: 1em
 }
-
-#upButton:hover {
-  transform: scale(1.2);
-}
