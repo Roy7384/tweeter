@@ -13,13 +13,24 @@ nav {
   z-index: 100;
 }
 
+nav button {
+  background-color: inherit;
+  border: none;
+}
+
+nav button:hover {
+  transform: scale(1.5);
+}
+
 nav span {
   font-size: 2.1em;
   font-family: 'Bungee', sans-serif;
 }
 
 nav div {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em
 }
 
 .fa-angles-down {
