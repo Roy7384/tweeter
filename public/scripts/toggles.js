@@ -5,32 +5,43 @@ $(() => {
     if (offset.top > 0) return true;
     return false;
   };
+
+  // getting jQuery objects for further manipulation
+  const $newTweetForm = $('.new-tweet');
+  const $upBotton = $('#upButton');
+  const $textArea = $('textarea');
  
   // scroll textarea into view when button in nav bar is clicked
   $('nav button').click(() => {
-    $('textarea')[0].scrollIntoView(false);
-    $('textarea').focus();
+
+    if (isTextareaVis()) {
+      $newTweetForm.slideUp();
+    } else {
+      $newTweetForm.slideDown();
+      $textArea[0].scrollIntoView(false);
+      $textArea.focus();
+    }
   });
 
   // keep the up button hidden
-  $('#upButton').hide();
+  $upBotton.hide();
 
-  // as soon as there is scroll event, get the two toggles to react according to whether textarea is in view
+  // as soon as there is scroll event, get the up button to react according to whether textarea is in view
   $(window).scroll(() => {
     if (isTextareaVis()) {
-      $('nav div').fadeIn('slow');
-      $('#upButton').fadeOut('slow');
+      $upBotton.fadeOut('slow');
     } else {
-      $('nav div').fadeOut('slow');
-      $('#upButton').fadeIn('slow');
+      $upBotton.fadeIn('slow');
     }
   });
   
-  //scroll textarea into view when button in nav bar is clicked
-  $('#upButton').click(() => {
-    $('textarea')[0].scrollIntoView(false);
-    $('textarea').focus();
-  });
+  //scroll textarea into view when up button is clicked
+  $upBotton.click(() => {
+    $('body > header')[0].scrollIntoView(false);
+    $newTweetForm.slideDown();
+    $textArea.focus();
+  }
+  );
 
   // add hover event for the two toggles to bounce
   $('nav div, #upButton').hover(() => {
@@ -38,6 +49,6 @@ $(() => {
     $('#upButton i').addClass('fa-bounce');
   }, () => {
     $('nav div i').removeClass('fa-bounce');
-    $('#upButton i').removeClass('fa-bounce'); 
-  })
+    $('#upButton i').removeClass('fa-bounce');
+  });
 });
