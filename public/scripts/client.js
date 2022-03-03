@@ -66,10 +66,15 @@ $(() => {
   // load tweets from server the first time user open up the page
   loadedTweets(true);
 
+  // helper function to clear error message about typing out new tweets
+  const clearErr = () => {
+    $('.new-tweet').find('b').remove();
+  };
+
   // helper function to create element containning validation error and append to the top of main section
   const addValidationError = function(str) {
     // remove previous added error message
-    $('.new-tweet').find('b').remove();
+    clearErr();
 
     // generate new error message
     const errorMsg = $('<b>').text(str);
@@ -79,6 +84,9 @@ $(() => {
     errorMsg.hide();
     errorMsg.slideDown();
   };
+
+  // clear error message whenever user tab out of the input area
+  $('textarea').blur(clearErr);
 
   // function to submit new tweets
   $("form").submit(event => {
@@ -100,7 +108,7 @@ $(() => {
     }
     
     // remove any exist error message
-    $('.new-tweet').find('b').remove();
+    clearErr();
 
     // serialize submit data and update tweets displayed
     const serializedData = $(event.target).serialize();
