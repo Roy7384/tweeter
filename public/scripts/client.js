@@ -42,23 +42,29 @@ $(() => {
   // function that take in an array of tweet data, create and append the tweet element to html
   const renderTweets = function(tweets) {
     const $tweetContainer = $('#tweets-container');
-    $tweetContainer.empty();
     let $tweetElement;
     for (const tweet of tweets) {
       $tweetElement = createTweetElement(tweet);
       $tweetContainer.prepend($tweetElement);
+      // animate the rendering of the tweets
+      $tweetElement.hide();
+      $tweetElement.slideDown();
     }
   };
 
   // function to get data from server using jQuery ajax shorthand get function and render them
-  const loadedTweets = function() {
+  const loadedTweets = function(initialLoad) {
     $.get('/tweets', data => {
-      renderTweets(data);
+      if (initialLoad) { // if its the first time, load everything
+        renderTweets(data);
+      } else {
+        renderTweets([data.pop()]); // if not, only render the latest one
+      }
     });
   };
   
   // load tweets from server the first time user open up the page
-  loadedTweets();
+  loadedTweets(true);
 
   // helper function to create element containning validation error and append to the top of main section
   const addValidationError = function(str) {
