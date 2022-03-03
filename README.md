@@ -6,13 +6,13 @@ It demonstrates authors' HTML, CSS, JS, jQuery and AJAX front-end skills, and No
 
 ## Final Product
 * Mobile layout
-![mobile layout]()
+![mobile layout](https://github.com/Roy7384/tweeter/blob/master/docs/mobileView.png?raw=true | width=100)
 
 * Desktop layout
-![Desktop layout]()
+![Desktop layout](https://github.com/Roy7384/tweeter/blob/master/docs/desktopView.png?raw=true)
 
 * Transition demo
-![Transition demo GIF]()
+![Transition demo GIF](https://github.com/Roy7384/tweeter/blob/master/docs/tweeter-demo.gif?raw=true)
 
 
 ## Getting Started
