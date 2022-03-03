@@ -1,0 +1,51 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet {
+  @include flex-column();
+
+  b {
+    color: red;
+    border: 3px solid red;
+    padding: 1em;
+    margin: 0.5em;
+    text-align: center;
+  }
+
+  label {
+    font-weight: bold;
+  }
+}
+
+form {
+  @include flex-column();
+  gap: 0.5em;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Bungee', sans-serif;
+  }
+
+  button {
+    background-color: #4056a1;
+    color: white;
+  }
+
+  .counter.exceed {
+    color: red;
+  }
+}
+
+textarea {
+  resize: none;
+  background-color: inherit;
+  border-width: 0 0 3px 0;
+  word-wrap: none;
+
+  &:focus {
+    outline: none;
+  }
+} 

@@ -4,46 +4,38 @@ article {
   border: 3px solid;
   padding: 1em;
 }
-
-.tweet {
-  margin: 1em 0;
-  padding: 0.3em;
-  border-bottom: 3px solid;
-}
-
 article:hover {
   box-shadow: 5px 5px #4056a1;
 }
-
-article header, footer {
+article header, article footer {
   display: flex;
   justify-content: space-between;
 }
-
 article header p {
-  color: rgb(195, 199, 221);
+  color: #c3c7dd;
   display: flex;
   align-items: center;
 }
-
 article img {
   width: 3em;
 }
-
 article div {
   display: flex;
   align-items: center;
   gap: 0.8em;
 }
-
 article footer {
   font-size: 18px;
 }
-
 article footer i {
-  color: #4056a1
+  color: #4056a1;
+}
+article footer i:hover {
+  color: orange;
 }
 
-article footer i:hover {
-  color: orange
+.tweet {
+  margin: 1em 0;
+  padding: 0.3em;
+  border-bottom: 3px solid;
 }

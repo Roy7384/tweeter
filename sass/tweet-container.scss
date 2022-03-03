@@ -1,0 +1,53 @@
+article {
+  color: inherit;
+  margin: 2em 0;
+  border: 3px solid;
+  padding: 1em;
+
+  &:hover {
+    box-shadow: 5px 5px #4056a1;
+  }
+
+  header, footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header p {
+    color: rgb(195, 199, 221);
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 3em;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+  }
+
+  footer {
+    font-size: 18px;
+    
+    i {
+      color: #4056a1;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}
+
+.tweet {
+  margin: 1em 0;
+  padding: 0.3em;
+  border-bottom: 3px solid;
+}
+
+
+
+
+

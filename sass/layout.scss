@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,16 +13,22 @@ html {
 /*
  * Global layout stuff
  */
+
+$font-stack: 'Source Sans Pro', sans-serif;
+$background-color:#f4f1ec; 
+$primary-color: #545149;
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $primary-color;
+  background-color: $background-color;
   font-size: 35px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $font-stack;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 p {
   margin: 0;
 }
@@ -31,13 +36,13 @@ p {
 #upButton {
   width: 3.5em;
   height: 3.5em;
-  color: #f4f1ec;
+  color: $background-color;
   background-color: red;
   border-radius: 50%;
   border: none;
   position: fixed;
   bottom: 1em;
-  right: 1em;
+  right: 1em
 }
 
 /* Desktop styles */
@@ -52,7 +57,7 @@ p {
     width: 30%;
     float: left;
     margin: 8em 0em 0em 2em;
-    box-shadow: 10px 10px #aa7e2c;
+    box-shadow: 10px 10px rgb(170, 126, 44);
   }
 
   main {
