@@ -17,7 +17,7 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 35px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -39,4 +39,27 @@ p {
   position: fixed;
   bottom: 1em;
   right: 1em
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+
+  body > header {
+    position: fixed;
+    min-width: 350px;
+    width: 30%;
+    float: left;
+    margin: 8em 0em 0em 2em;
+    box-shadow: 10px 10px rgb(170, 126, 44);
+  }
+
+  main {
+    width: 60%;
+    float: right;
+    padding: 2em;
+    margin-top: 6em;
+  }
 }
