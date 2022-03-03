@@ -28,3 +28,19 @@ body {
 p {
   margin: 0;
 }
+
+#upButton {
+  width: 3.5em;
+  height: 3.5em;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 1em;
+  right: 1em
+}
+
+#upButton:hover {
+  transform: scale(1.2);
+}
