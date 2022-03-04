@@ -117,7 +117,8 @@ $(() => {
       loadedTweets();
     });
     
-    // clear input area after submitting
+    // clear input area after submitting and update counter
     $textAreaEle.val('');
+    $('output').val(140);
   });
 });
