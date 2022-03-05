@@ -13,8 +13,8 @@ It demonstrates authors' HTML, CSS, JS, jQuery and AJAX front-end skills, and No
 * Desktop layout
 ![Desktop layout](https://github.com/Roy7384/tweeter/blob/master/docs/desktopView.png?raw=true)
 
-* Transition demo
-![Transition demo GIF](https://github.com/Roy7384/tweeter/blob/master/docs/tweeter-demo.gif?raw=true)
+* App demo
+![Transition demo GIF](https://github.com/Roy7384/tweeter/blob/master/docs/appDemo.gif?raw=true)
 
 
 ## Getting Started
