@@ -6,14 +6,17 @@ It demonstrates authors' HTML, CSS, JS, jQuery and AJAX front-end skills, and No
 
 ## Final Product
 * Mobile layout
+
 <p align='center'>
 <img src="https://github.com/Roy7384/tweeter/blob/master/docs/mobileView.png?raw=true" width=250>
 </p>
 
 * Desktop layout
+
 ![Desktop layout](https://github.com/Roy7384/tweeter/blob/master/docs/desktopView.png?raw=true)
 
 * App demo
+
 ![Transition demo GIF](https://github.com/Roy7384/tweeter/blob/master/docs/appDemo.gif?raw=true)
 
 
